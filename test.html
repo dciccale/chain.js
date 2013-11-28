@@ -1,8 +1,25 @@
 <!doctype html>
-  <script src="chain.js"></script>
-
 
   <input type="text" class="input" id="input" />
   <input type="text" class="input" />
   <input type="text" class="input" />
+
   <input type="text" class="input" />
+
+  <button id="btn"></button>
+
+  <script src="chain.js"></script>
+
+  <script>
+    $(document)
+      .querySelectorAll('input')
+      .value('test')
+      .style('color', 'red');
+
+    $('#btn')
+      .textContent('Click me')
+      .addEventListener('click', function () {
+        console.log('Clicked!');
+      });
+  </script>
+
