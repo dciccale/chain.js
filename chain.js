@@ -91,7 +91,7 @@
   /*
    * Native DOM event methods
    */
-  var nativeMethods = ['addEventListener', 'removeEventListener'];
+  var nativeMethods = ['addEventListener', 'removeEventListener', 'dispatchEvent'];
 
   nativeMethods.forEach(function (method) {
     Chain.prototype[method] = function () {
@@ -162,9 +162,13 @@
   var elementQueryProperties = [
     'firstElementChild',
     'lastElementChild',
-    'nextElementChild',
-    'previousElementChild',
-    'children'
+    'previousElementSibling',
+    'nextElementSibling',
+    'previousSibling',
+    'nextSibling',
+    'children',
+    'childNodes',
+    'parentNode'
   ];
 
   elementQueryProperties.forEach(function (property) {
